@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "HNG_TWO/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "HNG_TWO/wsgi.py"
+        }
+    ]
+}
